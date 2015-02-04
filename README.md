@@ -9,13 +9,14 @@ Release 1<br>
 Add skeleton<br>
 Removed extra readme
 
-In progress:<br>
 Release 2<br>
 Add boostrap styling<br>
-
-Todo:<br>
 Create Images folder<br>
 Upload Images<br>
+
+In progress:<br>
+
+Todo:<br>
 Get contact details for client<br>
 Add Email gem to allow clients to email client<br> 
 
