@@ -15,9 +15,9 @@ Inside this file define your helpers like:
 
 ```
 helpers do
-  def em(text)
-    "<em>#{text}</em>"
-  end
+def em(text)
+"<em>#{text}</em>"
+end
 end
 ```
 
