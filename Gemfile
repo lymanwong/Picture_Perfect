@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
-
+gem 'dotenv-rails', :groups => [:development, :test]
 # PostgreSQL driver
 gem 'pg'
 
@@ -14,6 +14,8 @@ gem 'activerecord', '~>4.1'
 gem 'rake'
 
 gem 'shotgun'
+
+gem 'pony'
 
 group :test do
   gem 'shoulda-matchers'
