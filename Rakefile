@@ -1,4 +1,4 @@
-# require 'dotenv/tasks'
+require 'dotenv'
 Dotenv.load
 
 require "dotenv-heroku/tasks"
