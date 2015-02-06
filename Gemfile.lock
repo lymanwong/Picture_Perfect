@@ -24,9 +24,8 @@ GEM
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
     diff-lcs (1.2.5)
-    dotenv (1.0.2)
-    dotenv-rails (1.0.2)
-      dotenv (= 1.0.2)
+    dotenv-heroku (0.0.1)
+      rake
     factory_girl (4.4.0)
       activesupport (>= 3.0.0)
     faker (1.3.0)
@@ -87,7 +86,7 @@ DEPENDENCIES
   activerecord (~> 4.1)
   activesupport (~> 4.1)
   capybara
-  dotenv-rails
+  dotenv-heroku
   factory_girl
   faker
   pg

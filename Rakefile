@@ -1,4 +1,7 @@
 require 'dotenv/tasks'
+Dotenv.load
+
+require "dotenv-heroku/tasks"
 
 task :mytask => :dotenv do
     # things that require .env
