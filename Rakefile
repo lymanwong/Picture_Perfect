@@ -1,9 +1,11 @@
-require 'dotenv'
-Dotenv.load
+require 'dotenv/tasks'
 
-require 'rake'
-require 'pony'
-require ::File.expand_path('../config/environment', __FILE__)
+task :mytask => :dotenv do
+    # things that require .env
+  end
+  require 'rake'
+  require 'pony'
+  require ::File.expand_path('../config/environment', __FILE__)
 
 # Include all of ActiveSupport's core class extensions, e.g., String#camelize
 require 'active_support/core_ext'
