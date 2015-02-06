@@ -25,8 +25,8 @@ post '/' do
       :address              => 'smtp.gmail.com',
       :port                 => '587',
       :enable_starttls_auto => true,
-      :user_name            => 'lymanwong@gmail.com',
-      :password             => 'peanut123123123',
+      :user_name            => ENV['LOGIN'],
+      :password             => ENV['PASSWORD'],
       :authentication       => :plain
     }
     })
