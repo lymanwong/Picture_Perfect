@@ -4,10 +4,10 @@ end
 
 post '/' do
   require 'pony'
-  name = params[:name]
-  email = params[:email]
-  phone = params[:phone]
-  message = params[:message]
+  # name = params[:name]
+  # email = params[:email]
+  # phone = params[:phone]
+  # message = params[:message]
   Pony.mail({
     :from => params[:name] + "<" + params[:email] + ">",
     :to => 'lymanwong@gmail.com',
