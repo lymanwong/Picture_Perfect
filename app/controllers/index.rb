@@ -4,15 +4,16 @@ end
 
 post '/' do
   require 'pony'
+  name = params[:name]
+  email = params[:email]
+  message = params[:message]
+  phone = params[:phone]
+  Pony.override_options = { :sender => params[:email]}
   Pony.mail({
     :from => params[:name] + "<" + params[:email] + ">",
     :to => 'lymanwong@gmail.com',
     :subject => params[:name] + " has contacted you from Perfect Picture Artistry",
-    :html_body =>
-    '<h4>Name: params[:name]</h4><br>
-    <h4>Phone number: params[:phone]</h4><br>
-    <h4>Email: params[:email]</h4><br>
-    <h4>Message: params[:message]</h4><br>',
+    :html_body => "<h4>Name: #{name}<h4>Email: #{email}</h4><h4>Phone: #{phone}</h4><h4>Message: #{message}</h4>",
     :body =>
     "Name: " + params[:name] + " | " +
     "Phone number: " + params[:phone] + " | " +
@@ -24,19 +25,10 @@ post '/' do
       :address              => 'smtp.gmail.com',
       :port                 => '587',
       :enable_starttls_auto => true,
-      :user_name            => LOGIN,
-      :password             => PASSWORD,
+      :user_name            => 'lymanwong@gmail.com',
+      :password             => 'peanut123123123',
       :authentication       => :plain
     }
     })
   redirect '/'
 end
-
-
-  #    get('/success') do
-  # @notification = "Thanks for your email. I'll be in touch soon."
-  # erb :index, :layout => :layout
-# end
-
-
-# Pony.mail(:to => 'you@example.com', :html_body => '<h1>Hello there!</h1>', :body => "In case you can't read html, Hello there.")
