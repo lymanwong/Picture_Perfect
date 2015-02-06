@@ -16,7 +16,7 @@ gem 'shotgun'
 
 gem 'pony'
 
-gem 'dotenv-heroku'
+# gem 'dotenv-heroku'
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
