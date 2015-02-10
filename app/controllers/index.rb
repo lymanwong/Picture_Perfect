@@ -16,10 +16,10 @@ post '/' do
     :to => 'lymanwong@gmail.com',
     :subject => params[:name] + " has contacted you from Perfect Picture Artistry",
     :html_body =>
-    '<h4>Name: params[:name]</h4><br>
-    <h4>Phone number: params[:phone]</h4><br>
-    <h4>Email: params[:email]</h4><br>
-    <h4>Message: params[:message]</h4><br>',
+    '<h4>Name: #{name}</h4><br>
+    <h4>Phone number: #{phone}</h4><br>
+    <h4>Email: #{email}</h4><br>
+    <h4>Message: #{message}</h4><br>',
     :body =>
     "Name: " + params[:name] + " | " +
     "Phone number: " + params[:phone] + " | " +
