@@ -18,6 +18,11 @@ Release 3: 2/4/15<br>
 Add Pony to allow clients to email client from page<br> 
 In progress:<br>
 
+Release 4: 2/9/15<br>
+ENV problems fixed<br>
+Emails now go to Picture Perfect<br>
+Glyphicon problems fixed<br>
+
 Todo:<br>
 Get original images from client<br>
 Get contact details for client<br>
