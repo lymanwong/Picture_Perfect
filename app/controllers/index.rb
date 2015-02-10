@@ -1,9 +1,6 @@
 require 'dotenv'
 Dotenv.load
 
-# puts ENV['LOGIN']
-# puts ENV['PASSWORD']
-
 get '/' do
   erb :index
 end
@@ -11,10 +8,10 @@ end
 post '/' do
   require 'pony'
   Pony.mail({
-    # name = params[:name]
-    # phone = params[:phone]
-    # email = params[:email]
-    # message = params[:message]
+    name = params[:name]
+    phone = params[:phone]
+    email = params[:email]
+    message = params[:message]
     :from => params[:name] + "<" + params[:email] + ">",
     :to => 'lymanwong@gmail.com',
     :subject => params[:name] + " has contacted you from Perfect Picture Artistry",
@@ -41,12 +38,3 @@ post '/' do
     })
   redirect '/'
 end
-
-
-  #    get('/success') do
-  # @notification = "Thanks for your email. I'll be in touch soon."
-  # erb :index, :layout => :layout
-# end
-
-
-# Pony.mail(:to => 'you@example.com', :html_body => '<h1>Hello there!</h1>', :body => "In case you can't read html, Hello there.")
