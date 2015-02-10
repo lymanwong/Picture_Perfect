@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+# require 'dotenv/tasks'
+
+# task :mytask => :dotenv do
+#     # things that require .env
+#   end
+>>>>>>> master
 require 'rake'
 require 'pony'
 require ::File.expand_path('../config/environment', __FILE__)

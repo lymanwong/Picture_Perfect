@@ -7,16 +7,19 @@ end
 
 post '/' do
   require 'pony'
-  name = params[:name]
-  email = params[:email]
-  phone = params[:phone]
-  message = params[:message]
   Pony.mail({
+    name = params[:name]
+    phone = params[:phone]
+    email = params[:email]
+    message = params[:message]
     :from => params[:name] + "<" + params[:email] + ">",
     :to => 'lymanwong@gmail.com',
     :subject => params[:name] + " has contacted you from Perfect Picture Artistry",
     :html_body =>
-    "<h4>Name: #{name}</h4><h4>Phone number: #{phone}</h4><h4>Email: #{email}</h4><h4>Message: #{message}</h4>",
+    '<h4>Name: params[:name]</h4><br>
+    <h4>Phone number: params[:phone]</h4><br>
+    <h4>Email: params[:email]</h4><br>
+    <h4>Message: params[:message]</h4><br>',
     :body =>
     "Name: " + params[:name] + " | " +
     "Phone number: " + params[:phone] + " | " +
@@ -35,12 +38,3 @@ post '/' do
     })
   redirect '/'
 end
-
-
-  #    get('/success') do
-  # @notification = "Thanks for your email. I'll be in touch soon."
-  # erb :index, :layout => :layout
-# end
-
-
-# Pony.mail(:to => 'you@example.com', :html_body => '<h1>Hello there!</h1>', :body => "In case you can't read html, Hello there.")
