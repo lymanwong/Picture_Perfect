@@ -1,7 +1,10 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
-gem 'dotenv-rails', :groups => [:development, :test]
+# gem 'dotenv-rails', :groups => [:development, :test]
 # PostgreSQL driver
+
+gem 'dotenv'
+
 gem 'pg'
 
 # Sinatra driver
