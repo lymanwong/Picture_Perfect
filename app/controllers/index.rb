@@ -7,19 +7,19 @@ end
 
 post '/' do
   require 'pony'
+  name = params[:name]
+  phone = params[:phone]
+  email = params[:email]
+  message = params[:message]
   Pony.mail({
-    name = params[:name]
-    phone = params[:phone]
-    email = params[:email]
-    message = params[:message]
     :from => params[:name] + "<" + params[:email] + ">",
     :to => 'lymanwong@gmail.com',
     :subject => params[:name] + " has contacted you from Perfect Picture Artistry",
     :html_body =>
-    '<h4>Name: #{name}</h4><br>
-    <h4>Phone number: #{phone}</h4><br>
-    <h4>Email: #{email}</h4><br>
-    <h4>Message: #{message}</h4><br>',
+    "<h4>Name: #{name}</h4>
+    <h4>Phone number: #{phone}</h4>
+    <h4>Email: #{email}</h4>
+    <h4>Message: #{message}</h4>",
     :body =>
     "Name: " + params[:name] + " | " +
     "Phone number: " + params[:phone] + " | " +
