@@ -1,3 +1,9 @@
+require 'dotenv'
+Dotenv.load
+
+# puts ENV['LOGIN']
+# puts ENV['PASSWORD']
+
 get '/' do
   erb :index
 end
@@ -5,6 +11,10 @@ end
 post '/' do
   require 'pony'
   Pony.mail({
+    # name = params[:name]
+    # phone = params[:phone]
+    # email = params[:email]
+    # message = params[:message]
     :from => params[:name] + "<" + params[:email] + ">",
     :to => 'lymanwong@gmail.com',
     :subject => params[:name] + " has contacted you from Perfect Picture Artistry",
@@ -24,8 +34,8 @@ post '/' do
       :address              => 'smtp.gmail.com',
       :port                 => '587',
       :enable_starttls_auto => true,
-      :user_name            => LOGIN,
-      :password             => PASSWORD,
+      :user_name            => ENV['LOGIN'],
+      :password             => ENV['PASSWORD'],
       :authentication       => :plain
     }
     })
