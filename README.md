@@ -22,6 +22,9 @@ Release 4: 2/9/15<br>
 ENV problems fixed<br>
 Emails now go to Picture Perfect<br>
 Glyphicon problems fixed<br>
+Create google+ account and hyperlinked it<br>
+Create Twitter account and hyperlinked it<br>
+Create Pinterest account and hyperlinked it<br>
 
 Todo:<br>
 Get original images from client<br>
