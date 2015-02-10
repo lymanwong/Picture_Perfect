@@ -13,7 +13,7 @@ post '/' do
   message = params[:message]
   Pony.mail({
     :from => params[:name] + "<" + params[:email] + ">",
-    :to => 'lymanwong@gmail.com',
+    :to => 'pictureperfectbyivon@gmail.com',
     :subject => params[:name] + " has contacted you from Perfect Picture Artistry",
     :html_body =>
     "<h4>Name: #{name}</h4>
