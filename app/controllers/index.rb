@@ -38,3 +38,7 @@ post '/' do
     })
   redirect '/'
 end
+
+after do
+  ActiveRecord::Base.connection.close
+end

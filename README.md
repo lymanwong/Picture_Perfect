@@ -26,6 +26,7 @@ Create google+ account and hyperlinked it<br>
 Create Twitter account and hyperlinked it<br>
 Create Pinterest account and hyperlinked it<br>
 Create google voice number and hyperlinked it<br>
+Added Google voice contact me widget<br>
 
 Todo:<br>
 Get original images from client<br>
