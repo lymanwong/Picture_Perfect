@@ -50,16 +50,16 @@ $(document).ready(function(){$('.carousel').carousel({interval:false});
   })
 
   /* when clicking a thumbnail */
-  $('.panel-thumbnail>a').click(function(event){
+  // $('.panel-thumbnail>a').click(function(event){
 
-    event.preventDefault();
-    var idx = $(this).parents('.panel').parent().index();
-    var id = parseInt(idx);
+  //   event.preventDefault();
+  //   var idx = $(this).parents('.panel').parent().index();
+  //   var id = parseInt(idx);
 
-  	$('#myModal').modal('show'); // show the modal
-    $('#modalCarousel').carousel(id); // slide carousel to selected
-    return false;
-  });
+  // 	$('#myModal').modal('show'); // show the modal
+  //   $('#modalCarousel').carousel(id); // slide carousel to selected
+  //   return false;
+  // });
 
 
 
