@@ -1,4 +1,7 @@
-# Picture_Perfect
+# Picture_Perfect v1
+
+Note - this site has been revamped to v2
+
 Site for Picture Perfect Artistry by Ivon<br>
 
 For reference:<br>
